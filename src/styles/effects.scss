@@ -1,0 +1,38 @@
+@mixin underline($clr: black, $w: 100%) {
+  //display: inline-block;
+  position: relative;
+
+  &:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: $w;
+    height: 2px;
+    transform: scaleX(0);
+    background-color: $clr;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+
+  &:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+}
+
+//######## Custom Styles ########
+
+//### Tippy ###
+.tippy-tooltip-content {
+  background-color: white !important;
+  color: black !important;
+
+  & > div {
+    padding: 0 !important;
+  }
+
+  &.profile {
+    margin-top: -10px;
+  }
+}

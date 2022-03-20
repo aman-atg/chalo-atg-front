@@ -1,0 +1,36 @@
+.Home {
+  position: relative;
+
+  &_footer {
+    display: grid;
+    grid-template-columns: minmax(500px, 1fr) 1fr;
+    margin-top: 20px;
+
+    &_list {
+      height: 350px;
+      overflow-y: auto;
+      @include setScrollbar;
+    }
+    &_options {
+      padding: 20px 40px;
+
+      &_route {
+        margin-top: 40px;
+        &.disabled {
+          pointer-events: none;
+          opacity: 0.5;
+        }
+
+        h2 {
+          font-weight: 500;
+          font-size: 20px;
+          margin-bottom: 20px;
+        }
+        .buttons {
+          display: flex;
+          gap: 20px;
+        }
+      }
+    }
+  }
+}

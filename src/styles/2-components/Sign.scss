@@ -1,0 +1,28 @@
+.Signin {
+  padding: 80px;
+  display: flex;
+  form {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    gap: 20px;
+  }
+  input {
+    font-size: 18px;
+    font-weight: 500;
+    width: 250px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+
+  button {
+    font-size: 18px;
+    font-weight: 500;
+    width: 250px;
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+  }
+}

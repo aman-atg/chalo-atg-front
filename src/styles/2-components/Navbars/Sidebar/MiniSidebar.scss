@@ -1,0 +1,47 @@
+.MiniSidebar {
+  grid-area: sidebar;
+  margin-top: 60px;
+  width: 72px;
+  background-color: #fff;
+
+  .SidebarList {
+    .SidebarItem {
+      @include fc(1, 0);
+      flex-direction: column;
+      padding: 16px 0 14px;
+
+      &.active {
+        background: #e5e5e5;
+        .leftIcon svg {
+          color: #030303 !important;
+        }
+        &:hover {
+          background: #c9c9c9;
+        }
+      }
+
+      .leftIcon {
+        color: #606060;
+        margin-bottom: 4px;
+
+        svg {
+          margin-top: 2px;
+          width: 24px;
+          height: 24px;
+        }
+        // margin-right: 24px;
+        // fill: #606060;
+      }
+      .text {
+        color: #606060;
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 10px;
+        font-weight: 400;
+        line-height: 14px;
+      }
+    }
+  }
+}

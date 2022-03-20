@@ -1,0 +1,18 @@
+.Navbar_left {
+  @include fc(1, 0);
+  .ham {
+    line-height: 0;
+    border-radius: 50%;
+    cursor: pointer;
+    &:hover {
+      background: #6060603a;
+    }
+    svg {
+      font-size: 0;
+      width: 40px;
+      height: 40px;
+      padding: 8px;
+      fill: rgb(96, 96, 96);
+    }
+  }
+}

@@ -1,0 +1,39 @@
+.App {
+  display: grid;
+  overflow: hidden;
+
+  grid-template-areas:
+    "navbar navbar"
+    "sidebar content";
+
+  grid-template-columns: max-content 1fr;
+
+  .content {
+    background: #f9f9f9;
+    margin-top: 48px;
+    grid-area: content;
+    padding: 16px;
+    padding-top: 24px;
+    padding-right: 28px;
+    height: calc(100vh - 48px);
+  }
+
+  .authContainer {
+    grid-area: navbar;
+    grid-template-areas:
+      "authNavbar"
+      "authContent";
+    height: 100vh;
+    .authContent {
+      grid-area: authContent;
+    }
+  }
+}
+
+.app-alert {
+  font-size: 14px;
+  font-weight: 500;
+  .Toastify .Toastify__toast-container .Toastify__toast .Toastify__toast-body {
+    font-family: Roboto;
+  }
+}

@@ -1,0 +1,68 @@
+// MEDIA-QUERIES
+
+// mobile
+$mobile-down-query: "only screen and (max-width : #{$mobile})";
+$mobile-up-query: "only screen and (min-width : #{$mobile})";
+
+// tablet
+$tablet-down-query: "only screen and (max-width : #{$tablet})";
+$tablet-up-query: "only screen and (min-width : #{$tablet})";
+
+// desktop
+$desktop-down-query: "only screen and (max-width : #{$desktop})";
+$desktop-up-query: "only screen and (min-width : #{$desktop})";
+
+// big-desktop
+$big-desktop-up-query: "only screen and (min-width : #{$big-desktop})";
+
+@mixin up-query($width) {
+  @media only screen and (min-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin down-query($width) {
+  @media only screen and (max-width: #{$width}) {
+    @content;
+  }
+}
+
+@mixin xdq($query) {
+  @media #{$query} {
+    @content;
+  }
+}
+
+@mixin mdq {
+  @media #{$mobile-down-query} {
+    @content;
+  }
+}
+@mixin tdq {
+  @media #{$tablet-down-query} {
+    @content;
+  }
+}
+
+@mixin ddq {
+  @media #{$desktop-down-query} {
+    @content;
+  }
+}
+
+@mixin muq {
+  @media #{$mobile-up-query} {
+    @content;
+  }
+}
+@mixin tuq {
+  @media #{$tablet-up-query} {
+    @content;
+  }
+}
+
+@mixin duq {
+  @media #{$desktop-up-query} {
+    @content;
+  }
+}

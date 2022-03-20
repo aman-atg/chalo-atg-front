@@ -1,0 +1,31 @@
+// Layout
+
+// 1st
+@mixin flex-centered($a: 1, $j: 1) {
+  display: flex;
+  @if ($a==1) {
+    align-items: center;
+  }
+  @if ($j==1) {
+    justify-content: center;
+  }
+}
+
+// 2nd
+@mixin fit-img {
+  & > img {
+    object-fit: cover;
+    width: 100%;
+    max-height: 100%;
+  }
+}
+
+//
+// aliases
+@mixin fc($a: 1, $j: 1) {
+  @include flex-centered($a, $j);
+}
+
+@mixin f-i {
+  @include fit-img;
+}
